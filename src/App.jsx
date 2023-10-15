@@ -14,10 +14,10 @@ function App() {
           url: "http://localhost:3000/meals"
       }).then((response) => {
         setMeals(response.data)
+      })
+      .catch((error) => {
+        console.error("error fetching data:", error);
       });
-      // .catch((error) => {
-      //   console.error("error fetching data:", error);
-      // });
 
     }, [])
 

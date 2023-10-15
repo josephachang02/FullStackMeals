@@ -1,9 +1,8 @@
-eslint-disable no-undef
+/* eslint-disable no-undef */
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
 const morgan = require('morgan');
-const axios = require('axios');
 const PORT = 3000;
 
 const app = express();

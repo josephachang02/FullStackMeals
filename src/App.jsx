@@ -11,13 +11,13 @@ function App() {
       // go get the data, put it in state
       axios({
           method: "GET",
-          url:"http://localhost:3123/meals"
+          url: "http://localhost:3000/meals"
       }).then((response) => {
         setMeals(response.data)
-      })
-      .catch((error) => {
-        console.error("error fetching data:", error);
       });
+      // .catch((error) => {
+      //   console.error("error fetching data:", error);
+      // });
 
     }, [])
 
@@ -26,8 +26,7 @@ function App() {
       <h1>My Meals App</h1>
       {meals.map((meal) => {
       return (
-        <div key={JSON.stringify(meals)}>
-          
+        <div key={JSON.stringify(meal)}>
           <div>{meal.name}</div>
           <img src={meal.picture}/>
           <div>{meal.ingredients}</div>
